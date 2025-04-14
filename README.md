@@ -8,7 +8,6 @@ Hosted at : https://automl-flask.onrender.com/
 ## 📸 Project Preview
 
 <!-- Insert a screenshot or GIF of your app interface below -->
-![App Screenshot]
 ![image](https://github.com/user-attachments/assets/9e64f64f-5451-4eb8-9267-0cc6ad6bdf8e)
 ![image](https://github.com/user-attachments/assets/7a004bfc-8731-472a-ab23-7fe0abfc88c4)
 ![image](https://github.com/user-attachments/assets/1c56a55d-2d55-47f0-a12e-8ea1a7bcc86e)
