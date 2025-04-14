@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prepare Data 🛠️</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2>🧪 Feature Selection</h2>
+
+    <h4>📌 Correlation Heatmap:</h4>
+    <img src="{{ url_for('static', filename=heatmap) }}" width="700" class="img-fluid"/>
+
+    <form method="POST" action="/train" class="mt-4">
+        <h5>✅ Select Problem Type:</h5>
+        <select name="problem_type" class="form-select mb-3" required>
+            <option value="classification">Classification</option>
+            <option value="regression">Regression</option>
+        </select>
+
+        <h5>✅ Select Target Column:</h5>
+        <select name="target" class="form-select mb-3" required>
+            {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+            {% endfor %}
+        </select>
+
+        <h5>❌ Remove Columns (Optional):</h5>
+        {% for col in columns %}
+            <div>
+                <input type="checkbox" name="remove_cols" value="{{ col }}"> {{ col }}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary mt-3">Train Models 🚀</button>
+    </form>
+</body>
+</html>
